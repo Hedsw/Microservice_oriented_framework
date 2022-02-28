@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML Microservice</title>
+</head>
+<body>
+    <h2>A microservice-oriented framework for Anomaly detection</h2>
+    -------------------------------------------------------------------------------------
+    <h2>Dateset Upload</h2>
+    <form action = "http://localhost:5009/uploader" method = "POST" enctype = "multipart/form-data">
+        <input type = "file" name = "File" />
+        <input type = "submit" value = "Submit" />
+    </form>  
+    -------------------------------------------------------------------------------------
+    <h2>Preprocess</h2>
+    <form>
+        <div>
+          <!-- When I click this button, run Lasso on anomaly_detection code-->
+          <input type="checkbox" id="Lasso" name="Lasso" value="Lasso">
+          <label for="Lasso">Lasso</label>
+        </div>
+        <br>
+        <div>
+          <!-- When I click this button, run LogisticRegression on anomaly_detection code-->
+            <input type="checkbox" id="LogisticRegression" name="LG" value="LG">
+            <label for="LogisticRegression">LogisticRegression</label>
+          </div>
+        <br><br>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+    </form>  
+    -------------------------------------------------------------------------------------
+    <h2>Anomaly Detection</h2>
+    <form>
+        <div>
+          <!-- When I click this button, run RandomFrest on anomaly_detection code-->
+          <input type="checkbox" id="RandomForest" name="RF" value="RF">
+          <label for="RandomForest">RandomForest</label>
+        </div>
+        <br>
+        <div>
+            <!-- When I click this button, run SVM on anomaly_detection code-->
+            <input type="checkbox" id="SupportVectorMachine" name="SVM" value="SVM">
+            <label for="SupportVectorMachine">SupportVectorMachine</label>
+          </div>
+        <br><br>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+    </form>
+    -------------------------------------------------------------------------------------
+    <h2>Evaluation</h2>
+    <form action="">
+        <div>          
+            <button type="submit">Start</button>
+        </div>
+    </form>
+    -------------------------------------------------------------------------------------
+</html>
+</body>
+</html>
